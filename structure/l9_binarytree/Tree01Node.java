@@ -6,9 +6,9 @@ package l9_binarytree;
  * @CreateTime: 2020-03-11 09:37
  */
 public class Tree01Node {
-    private int value;
-    private Tree01Node left;
-    private Tree01Node right ;
+    public int value;
+    public Tree01Node left;
+    public Tree01Node right ;
 
     public Tree01Node(int value) {
         this.value = value;

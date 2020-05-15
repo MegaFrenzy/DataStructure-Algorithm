@@ -5,7 +5,7 @@ package l4_stack;
  * @Author: MegaFrenzy
  * @CreateTime: 2020-03-02 21:08
  */
-public class Demo04 {
+public class Demo_l04 {
     public static void main(String[] args) {
         ArrayStack<Integer> stack = new ArrayStack<>(5);
         stack.push(2);

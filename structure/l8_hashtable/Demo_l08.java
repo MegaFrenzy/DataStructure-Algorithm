@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @Author: MegaFrenzy
  * @CreateTime: 2020-03-09 23:36
  */
-public class Demo {
+public class Demo_l08 {
     public static void main(String[] args) {
         HashTable ht = new HashTable(7);
         Scanner scanner = new Scanner(System.in);
