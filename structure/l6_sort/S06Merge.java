@@ -10,7 +10,9 @@ import java.util.Arrays;
 
 public class S06Merge {
     public static void main(String[] args) {
-        int[] arr = {1, 4, 7, 8, 3, 6, 9};
+        //int[] arr = {1, 4, 7, 8, 3, 6, 9};
+        int[] arr = {-1, 5, -3, 5, 5, 5};
+
         int[] temp = new int[arr.length];
         mergeSort2(arr, 0, arr.length - 1, temp);
         System.out.println(Arrays.toString(arr));

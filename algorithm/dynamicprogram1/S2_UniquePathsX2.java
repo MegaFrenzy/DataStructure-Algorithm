@@ -40,27 +40,31 @@ public class S2_UniquePathsX2 {
      * [0,0,0]
      * The total number of unique paths is 2.
      */
-    public static int uniquePath2(int[][] A) {
-        int m = A.length;
-        int n = A[0].length;
-        int[][] f = new int[m][n];
+    //same as leetCode 63.uniquePathsWithObstacles
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        if (obstacleGrid == null || obstacleGrid.length == 0) return 0;
 
+        int m = obstacleGrid.length, n = obstacleGrid[0].length;
+        int[][] dp = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                f[i][j] = 0;
-                if (A[i][j] == 1) {
-                    f[i][j] = 0;
+                if (obstacleGrid[i][j] == 1) {
+                    dp[i][j] = 0;
                     continue;
                 }
+                if (i == 0 && j == 0) {
+                    dp[i][j] = 1;
+                    continue;
+                }
+                dp[i][j] = 0;
                 if (i > 0) {
-                    f[i][j] += f[i - 1][j];
+                    dp[i][j] += dp[i - 1][j];
                 }
                 if (j > 0) {
-                    f[i][j] += f[i][j - 1];
+                    dp[i][j] += dp[i][j - 1];
                 }
             }
         }
-
-        return f[m - 1][n - 1];
+        return dp[m - 1][n - 1];
     }
 }

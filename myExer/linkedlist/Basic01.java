@@ -1,6 +1,5 @@
 package linkedlist;
 
-import l3_linkedlist.linkedList02SingleCircle.ListNode;
 
 /**
  * @Description:
@@ -51,4 +50,12 @@ public class Basic01 {
         return n1;
     }
 
+    class ListNode {
+        ListNode next;
+        int val;
+
+        public ListNode(int val) {
+            this.val = val;
+        }
+    }
 }
