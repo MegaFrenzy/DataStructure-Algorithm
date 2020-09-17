@@ -10,6 +10,7 @@ import java.util.Random;
  */
 public class S05Quick {
 
+
     public static void quick2(int[] arr, int start, int end) {
         if (start >= end) {
             return;
@@ -36,8 +37,8 @@ public class S05Quick {
     }
 
     public static void main(String[] args) {
-        int arr[] = {-9, 78, 0, 23, -57, 70, 80, -60};
-
+        //int arr[] = {-9, 78, 0, 23, -57, 70, 80, -60};
+        int[] arr = new int[]{3,2,1,5,6,4};
 
         //快速排序是先整体后局部的排序，每次尽可能的均分排序
         quick2(arr, 0, arr.length - 1);

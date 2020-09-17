@@ -40,7 +40,7 @@ public class S04Shell {
                 }
                 arr[insertIndex]=insertVal;
             }
-            //System.out.printf("希尔排序第%d轮=%s\n", ++count, Arrays.toString(arr));
+            System.out.printf("希尔排序第%d轮=%s\n", ++count, Arrays.toString(arr));
         }
 
 

@@ -1,8 +1,4 @@
-import java.lang.reflect.Array;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.stream.IntStream;
+
 
 /**
  * @Description:
@@ -22,7 +18,21 @@ public class tinyTest {
         String res = "123";
         String s = res.substring(0, res.length() - 1);
         System.out.println(s);
+        char[] chars = s.toCharArray();
+        System.out.println((int)chars[0]+"_"+(int)chars[1]);
 
+        System.out.println(Math.abs(Integer.MIN_VALUE));
+    }
+
+
+    public int[] divingBoard(int shorter, int longer, int k) {
+        int[] res = new int[k + 1];
+        int len = res.length;
+        for (int i = 0; i < len; i++) {
+            res[i] = shorter * (k - i);
+            res[i] += longer * (i);
+        }
+        return res;
     }
 
 

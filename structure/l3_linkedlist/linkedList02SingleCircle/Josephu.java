@@ -7,12 +7,12 @@ package l3_linkedlist.linkedList02SingleCircle;
  */
 public class Josephu {
     public static void main(String[] args) {
-        count(1,2,25);
+        count(1, 2, 25);
     }
 
-    public static void count(int startNo,int countNo,int nums){
+    public static void count(int startNo, int countNo, int nums) {
         //参数检测
-        if(startNo<1||countNo<0||nums<1||startNo>nums)
+        if (startNo < 1 || countNo < 0 || nums < 1 || startNo > nums)
             return;
         //节点添加
         SingleCircleLinkedList list = new SingleCircleLinkedList();
@@ -21,17 +21,17 @@ public class Josephu {
             list.add(node);
         }
         //辅助结点的设定
-        ListNode startCursor=list.getFirst();
+        ListNode startCursor = list.getFirst();
         for (int i = 1; i < startNo; i++) {
-            startCursor=startCursor.next;
+            startCursor = startCursor.next;
         }
-        ListNode preCursor=startCursor;
-        while(preCursor.next!=startCursor){
-            preCursor=preCursor.next;
+        ListNode preCursor = startCursor;
+        while (preCursor.next != startCursor) {
+            preCursor = preCursor.next;
         }
 
         //游戏循环
-        while(startCursor!=preCursor) {
+        while (startCursor != preCursor) {
             for (int i = 1; i < countNo; i++) {
                 startCursor = startCursor.next;
                 preCursor = preCursor.next;
@@ -42,7 +42,6 @@ public class Josephu {
             startCursor = preCursor.next;
         }
         System.out.printf("no.%d win\n", startCursor.value);
-
 
 
     }

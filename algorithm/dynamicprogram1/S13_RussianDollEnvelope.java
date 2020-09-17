@@ -1,5 +1,6 @@
 package dynamicprogram1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -20,7 +21,6 @@ public class S13_RussianDollEnvelope {
     public static void main(String[] args) {
         System.out.println(maxEnvelopes(new int[][]{{5, 4}, {6, 4}, {6, 7}, {2, 3}}));
         System.out.println(maxEnvelopes(new int[][]{{4, 5}, {4, 6}, {6, 7}, {2, 3}, {1, 1}}));
-
     }
 
     public static int maxEnvelopes(int[][] envelopes) {
@@ -30,14 +30,11 @@ public class S13_RussianDollEnvelope {
         int res = 1;
         int n = envelopes.length;
         //按照从小到大排序
-        Arrays.sort(envelopes, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] a, int[] b) {
-                if (a[0] == b[0]) {
-                    return a[1] - b[1];
-                } else {
-                    return a[0] - b[0];
-                }
+        Arrays.sort(envelopes, (a, b) -> {
+            if (a[0] == b[0]) {
+                return a[1] - b[1];
+            } else {
+                return a[0] - b[0];
             }
         });
         //dp[i]表示以索引i结尾的信封数量

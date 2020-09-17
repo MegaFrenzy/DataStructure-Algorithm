@@ -20,48 +20,48 @@ public class QueueCircle implements Queue {
 
     @Override
     public boolean isFull() {
-        return (rear+1)%maxSize ==front;
+        return (rear + 1) % maxSize == front;
     }
 
     @Override
     public boolean isEmpty() {
-        return rear==front;
+        return rear == front;
     }
 
     @Override
     public void addQueue(int num) {
-        if(isFull()){
+        if (isFull()) {
             throw new RuntimeException("the queue is full");
         }
-        arr[rear++]=num;
+        arr[rear++] = num;
         rear %= maxSize;
         System.out.println(num + "has been added");
     }
 
     @Override
     public int getQueue() {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new RuntimeException("the queue is empty");
         }
         int head = arr[front++];
-        front %=maxSize;
+        front %= maxSize;
         return head;
     }
 
     @Override
     public void showQueue() {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new RuntimeException("the queue is empty");
         }
-        int num = (rear-front+maxSize)%maxSize;
-        for(int i=front;i<front+num;i++){
-            System.out.printf("arr[%d]=%d\n",i%maxSize,arr[i%maxSize]);
+        int num = (rear - front + maxSize) % maxSize;
+        for (int i = front; i < front + num; i++) {
+            System.out.printf("arr[%d]=%d\n", i % maxSize, arr[i % maxSize]);
         }
     }
 
     @Override
     public int headQueue() {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new RuntimeException("the queue is empty");
         }
         return arr[front];

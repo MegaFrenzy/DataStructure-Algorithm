@@ -29,20 +29,21 @@ import java.util.LinkedList;
  */
 public class SysDeque {
     public static void main(String[] args) {
-        Deque<Integer> deque = new LinkedList<>();
+        //Deque<Integer> deque = new LinkedList<>();
+        Deque deque = new LinkedList();
         //d  b  c  a
-//        deque.offerFirst("a");
-//        deque.offerFirst("c");
-//        System.out.println(deque);
-//        deque.offerFirst("b");
-//        deque.offerFirst("d");
-//        System.out.println(deque);
-//        System.out.println(deque.peekFirst());
-//        System.out.println(deque.peekLast());
-//        System.out.println(deque);
-//        while (deque.size() > 0) {
-//            System.out.println(deque.pollFirst());
-//        }
+        deque.offerFirst("a");
+        deque.offerFirst("c");
+        System.out.println(deque);
+        deque.offerFirst("b");
+        deque.offerFirst("d");
+        System.out.println(deque);
+        System.out.println(deque.peekFirst());
+        System.out.println(deque.peekLast());
+        System.out.println(deque);
+        while (deque.size() > 0) {
+            System.out.println(deque.pollFirst());
+        }
 
         System.out.println(deque);
         System.out.println("===========");
@@ -50,6 +51,6 @@ public class SysDeque {
         deque.addLast(3);
         deque.addLast(5);
 //        System.out.println(deque.removeLast() * deque.getLast());
-        System.out.println(deque.getLast() * deque.removeLast());
+        //System.out.println(deque.getLast() * deque.removeLast());
     }
 }

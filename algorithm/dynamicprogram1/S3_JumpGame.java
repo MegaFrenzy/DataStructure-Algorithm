@@ -18,22 +18,27 @@ package dynamicprogram1;
 public class S3_JumpGame {
     public static void main(String[] args) {
         int[] arr = new int[]{3,2,1,0,4};
+        //arr = new int[]{0};
         System.out.println(jumpGame(arr));
     }
 
-    /**
-     * @param arr : A list of integers
-     * @return
-     */
-    public static boolean jumpGame(int[] arr) {
-        boolean[] f = new boolean[arr.length];
-        f[0] = arr[0] != 0;
-        for (int i = 1; i < arr.length; i++) {
-            f[i] = false;
-            for (int j = 1; j <= i; j++) {
-                f[i] = f[i] || (arr[i - j] >= j);
+
+    public static boolean jumpGame(int[] nums) {
+        if (nums == null || nums.length == 0) return false;
+        int len = nums.length;
+        boolean[] dp = new boolean[len];
+
+        dp[0] = true;
+        for (int i = 1; i < len; i++) {
+
+            dp[i] = false;
+            for (int p = i - 1; p >= 0; p--) {
+                if (dp[p] && p + nums[p] >= i) { //dp[p]可达，并在该位置可跳到dp[i]
+                    dp[i] = true;
+                    break;
+                }
             }
         }
-        return f[arr.length - 1];
+        return dp[len - 1];
     }
 }

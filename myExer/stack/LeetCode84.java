@@ -1,4 +1,4 @@
-package other;
+package stack;
 
 import java.util.*;
 
@@ -7,7 +7,7 @@ import java.util.*;
  * @Author: MegaFrenzy
  * @CreateTime: 2020-05-10 19:06
  */
-public class UnClassified {
+public class LeetCode84 {
 
     //84. 柱状图中最大的矩形  Stack单调栈
     public static int largestRectangleArea(int[] heights) {

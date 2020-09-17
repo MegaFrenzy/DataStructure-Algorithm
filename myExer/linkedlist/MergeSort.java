@@ -7,10 +7,12 @@ package linkedlist;
  */
 public class MergeSort {
     public static void main(String[] args) {
-        Node n1 = new Node(6);
-        n1.next = new Node(1);
-//        n1.next.next = new Node(3);
-        //n1.toPrint();
+        Node n1 = new Node(7);
+        n1.next = new Node(8);
+        n1.next.next = new Node(9);
+        n1.next.next.next = new Node(10);
+
+        n1.toPrint();
 
         MergeSort ms = new MergeSort();
         Node res = ms.mergeSort0(n1);
@@ -76,4 +78,6 @@ public class MergeSort {
             }
         }
     }
+
+
 }

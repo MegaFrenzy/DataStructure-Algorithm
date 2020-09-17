@@ -6,8 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/myExer" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/algorithm" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/structure" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="jdk-1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="JUnit4">
